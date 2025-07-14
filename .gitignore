@@ -1,0 +1,4 @@
+/skriti
+leksikalniAnalizator/*
+!leksikalniAnalizator/lexer.c
+!leksikalniAnalizator/types.h
