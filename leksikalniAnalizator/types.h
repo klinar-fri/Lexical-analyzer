@@ -1,8 +1,6 @@
 #ifndef TYPES_H
 #define TYPES_H
 
-#include <stdlib.h>
-
 typedef enum{
     tok_str,
     tok_num,

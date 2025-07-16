@@ -19,45 +19,15 @@ int main(){
         znak = getc(stdin);
 
         switch(znak){
-            // operatorji (vem, ponavljajoča koda...)
+            // operatorji
             case '=' : 
-                curr = znak;
-                znak = getc(stdin);
-                if(znak == '='){
-                    printf("%s[==]\n", tokenStrings[tok_operator]);
-                }else{
-                    ungetc(znak, stdin);
-                    printZnak(tok_operator, curr);
-                }
-            break;
-
             case '+' : 
-                curr = znak;
-                znak = getc(stdin);
-                if(znak == '='){
-                    printf("%s[+=]\n", tokenStrings[tok_operator]);
-                }else{
-                    ungetc(znak, stdin);
-                    printZnak(tok_operator, curr);
-                }
-            break;
-            
             case '-' : 
-                curr = znak;
-                znak = getc(stdin);
-                if(znak == '='){
-                    printf("%s[-=]\n", tokenStrings[tok_operator]);
-                }else{
-                    ungetc(znak, stdin);
-                    printZnak(tok_operator, curr);
-                }
-            break;
-            
             case '*' : 
                 curr = znak;
                 znak = getc(stdin);
                 if(znak == '='){
-                    printf("%s[*=]\n", tokenStrings[tok_operator]);
+                    printf("%s[%c=]\n", tokenStrings[tok_operator], curr);
                 }else{
                     ungetc(znak, stdin);
                     printZnak(tok_operator, curr);
@@ -93,21 +63,11 @@ int main(){
             break;
             
             case '>' : 
-                curr = znak;
-                znak = getc(stdin);
-                if(znak == '='){
-                    printf("%s[>=]\n", tokenStrings[tok_operator]);
-                }else{
-                    ungetc(znak, stdin);
-                    printZnak(tok_operator, curr);
-                }
-            break;
-            
             case '<' : 
                 curr = znak;
                 znak = getc(stdin);
                 if(znak == '='){
-                    printf("%s[<=]\n", tokenStrings[tok_operator]);
+                    printf("%s[%c=]\n", tokenStrings[tok_operator], curr);
                 }else{
                     ungetc(znak, stdin);
                     printZnak(tok_operator, curr);
@@ -116,33 +76,12 @@ int main(){
 
             // locila
             case ',' : 
-                printZnak(tok_separator, znak);
-            break;
-
             case ';' : 
-                printZnak(tok_separator, znak);
-            break;
-
             case '(' : 
-                printZnak(tok_separator, znak);
-            break;
-
             case ')' : 
-                printZnak(tok_separator, znak);
-            break;
-
             case '{' : 
-                printZnak(tok_separator, znak);
-            break;
-
             case '}' : 
-                printZnak(tok_separator, znak);
-            break;
-            
             case '[' : 
-                printZnak(tok_separator, znak);
-            break;
-            
             case ']' : 
                 printZnak(tok_separator, znak);
             break;
